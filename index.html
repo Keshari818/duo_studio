@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Duo_Studio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
+</head>
+
+<body>
+    <div class="cursor">
+
+    </div>
+
+    <div id="nav">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMEAAACUCAMAAAAd373qAAAAb1BMVEUNDQ319vgAAAAODg4MDAz29/n8/f/5+vwMDQ/29vbU1NQ4ODju7/EqKioFBQXn6Opzc3WsrKyMi42Wl5nHyMogICEvLy6AgYJdXmARExXd3d0AAAUcHByenp6+v8EYGBhQUFBBQUFra2u0tbdISEhJ426mAAAMEklEQVR4nO1ci5qqMA6GtlDkUgRFEEUUff9n3CQtF8HZQWfOjn5LzpwZkULzN5emJcGyFlpooYUWWmihhRZaaKGFFlpooYUWWmihhRZaaKF/TYLjz2Pi5rcYfiOs/lhYXFj6GG/D7xsPunjwLe/OTU6Ih99/xaTYY9fCEFwt2rtw4lfg2UFzPGhb05WW0Ajo4q8Q0EnvnvR9+KQ9jYXuh0/PTu+OTHW90ihygkGc07CK4XhwPdAtHK6ws1Yy9ItPRo/rYRhyLwgBx96nCBTyT+AejccYgKBRHhyLdtzbwR9oGXFLl+jGyAF9RWBF92eCgDqyvANjjB+zrFbw4YANH6iwUHs4wzKGQPh0PMY3RybYQ8I+uR7hgRYpOL5rZYlaAY+Dr9QEATGq2P6yTjdVlVRVlebFDlo+EgFLGyaiNNkEzJqjRYg5r6qNIfhEB+n6nCF71MWQIwRc9K0LGK89jPuxqTRtqs2NjRFAA8V26+pUhrZ0XSldJ/avmzMO05hHdVw1jKXx1U/YPEOwBCvhjoakxB/HCcvtdVPUTJFWtHche+QsDdvW7qYmfVW7BPmSjivdcD1BgKpdJLGU0g5t27Ed+JFyddpEbMIiK1aMHeOUreNAiW+VCMUrmO+spuS6K7+6oUoMholMFhB0jTbGzUSJXK2kjd/FEwQg5iz34TRxD7+QbLlywuTCxnbAznYAPXB2jvHkDBGACvt4b0MrvDn+tW0pw22hPE/tvb4xdIgyMK3dzZ66UFHiIn9wI2eKwFPHvAQB0SWEIEQp2KEbXqODHuZutEW99a/xhtW5/9AtTAgscYjAsY2U9ZH0bwdg37u7ZIwAlUQjoGumCIQqSumY4adGeGRL0KgwYZ6eRTp9YTcw9EjtbwUzc9JTCDSG/kBedwDBG7Z/GgH3wEqQY2CY1AhloEVgy7JhlrifCFkdcdAfcLzz7HgkA62jLUEXjae8H8rgUMRwz1DadmfGJA3sKbwyM5cPSemZZVZsMZGBxtF+km4SKfEzBCLbuLIdnhB0x8hAklr5N0beoONVmLiI5jNrOl88JwPoKgRL+BkCdvEl+V/kHTwwkIPca3OOczaSgBCKK4VzoLWf4U6ndiCHGMDDNz/VIlYQAHPDpLjd8li7VZvcEdPhSNsceFa8jWqet+Q4Lss4lLKD4Lh57f3IkoVqXOOIYHjSTB0O3q5s1cp2tmbqbVlFzjHcsPRk+pwWOWFQH4GCSg8azbtJ9jMZiDp3iVW4yL0GBwxM2dpp+5TbjPGhNyX2iXOUwPemPEKwY4pBCJkhQ9pZyOtvIDATjZ3uKbI+7DqvLf3gPhQE/VcUtDMd4z+JIKKQVkFQssIQARGcoh8iOKaunmYgCskZrSoEg5v3CKzhWHNcdECskzU6cH9aBmBHMJs0visRAWjuNlI/QwDOdIBAr77uELA7ZwrhpFI1xEdxpOaEdmM7YLQ8YoUPzGMnjnOP4AVLRgTkpOF+gICMdIygN1ghomMG/+oizmh197QMSIyAgGJP+7dkQJ6IEOjJ6l6L+GBWZpfT9YS0LTMlnpfBTtEKFRCAFmEwY/8KAscgcHKmV31fIxBZSqunNAEEfM5CeSwDnMtFL4NfQ+DYLQJS05U71CLL6meudsF6izOl19hPykAbWtF+9zta1LZ3cjoHQ2S3ZHzRhDF2O2UPN2N+iuA1S36AYDgfjENTuqze6R2p30Zg/QsEj2TQ7vl8B+CdEXBhzdlueV8EetvxeV/0Pghoq+qF+YC9iyVjhDcMumcj+HsZ0IavRcsDa85+0Vsi0AokaB/8A+2g30XWKD4PAcR2FQV3Va3+hR38e0tmRXndbKpNlR6f37N7BxkIUW4uWYQ0a6H/fgjY2TkyAaszoegJzivR9R8jKGJ6/qTa54cfJwMl7LR9nGW9stvy55YMq6s4Tq5JUm3qmU9j30wGllJBekrAmya1evRs9/0RcKW6h6JzhPB+CMB6wRPhfit//inUWyCAkLQWtO9Gj7M/cJ2MW2KKJrNZy4P3lIHOJSAsL+yb/jkCSjdpJ7KPtANa3lNOyJw9x7dEgCz0ID7QksUgSeYj18kiyw01Nf/I+YCdbX+79YHKSL3wJPANENzi4HIJgqCJMyXeee/6SwSXGJPZFDu/iODPd7xUtIowLFJNOcoY+RQZCFYm6Iii05XNWCW/IQLoO0yac3Mqz2zOMvkNEVgsP23907UxDw0/DwGcvDXrAnM1xb9A8D+Yk/c6oRWWOB+6wtHJypzrZOdPREAP0Ih3yr3+wPWBSZWmAJXvPzCqsDDFS+kcrxlW8I6WrNN3lCVqS1c3fJwMlKiJCSH0UufzEJAvVUIpSiL5QDsQ/BLcAgyvA/XS3vWf+KKhHbDzysUaBdfFFc5L62TcbO2ycxzMzuny7LR77hGs3ArdHUicsvdX+LX8L9k5oUyprkMBgkF2jhpmUIh+nUywns4U1BU4KAOHEDhDBPp2dwjI1kgGjs55+goBnpIoA9zPmmYK9u2Vnsr0pt0L3pTRPNjL4F6LqA5qhADHzsiA0um+yLPDBCnMUqNsKDXN8eqdTl9bRiJ5GgGVZqEMSIcmdsAnFRQKuzFahIx+levoYJpazqgCSo0yBa1BHhFB4W0V1AvrA7qYNSVla35jyStEQL67R/BfszWl0SLO3BGC4QXCVH/NU6MJAkUZs8Skzjc9DRGg0gwQyGSvMEddRVdpWJJx81XGrJRuir5uP8l1HI42FfVZ7WT8tBZl5ATqYosOkOo1ZJLdRRWCszw2CBzHP1KB3yEw93B0VcddD13WMrBbwXAAsXP7DWUi3gVAvK2tnFmZOUKQ4mZZWm27DH5HVsdx7vu61Ccd27ULxjzvwNamegcQ+MUIAV9TvQHm0+NJ5SnGEqnHBxHoOHo4Rqa+cM7z8BGCdmRl94W03Xx/l3eNqZxb6SBPyIHf7Kx6t/adNkFfni6T+gPX1q3xbBNxfklDqUtZQumcmNnoHYyRrknkz2fnaHW9qwKx3WJQQUGyVcHJtakGRdqhW16T5FpiURClyttudRzXyJ07rUMpXJPqFJKXC0nsFaOyuE5pIC5aV0nV4OPkp9fJtqliGQCQZXAY1OHoMthEUkkKsEtSkrqixjCZjguJVHClOhxsE6I9S2kUCMcAzYb8Z9ecJ/7put2m7IWnUD2M7qO7yQaVRDSfCjBlqe3cdo3+hy0AuS3GCMQ+l3Zn+wAC5WWbG0ifcpOHgVFV5kF23pT5S/VojjNCEJ/vqrloH5AFJ82SG0pzheEIqNqrcR+Hs69LSowgnP6DE26Y8Z+tCI6rNRgByyqfz1kePETQV9VJJ828vbhHAFfkJWpAW+bXskdVNWfmjVVXHVNt6B1Q2xg2uOPd4T6CZsXKhGbxbsYK7aElD9Wp2oEE9nczGsdC0STUHNitCzJzVrkeV04RV2AJnWTDlnt0BTD9edwabvCyJqYqC6osnbF1jS5XbZ1HxbEQpsfpTtyv9PQn0KNkZWr8NP9S+8oyPz4o24ARvV3lUJE0iNCN12Jcj80uqwjzEVQTH+dUc5G8SneMAGYELO4tdA3DZBwgrtmBNa9ao3HIkqXcNkc2XZTQgiCoALGUYW8I0nH9ApM/RnCZf8XpIIA/1qwNL5DXqRyTf6ry4pLhs3XrQWUh+qPjbVPCQsoUTGGd3zYP9Gph1CsNAouKJMbycGMycIGfB+xBHT67xf66SMstVnN8v8qkzbFdMKZdlNWafZLAFAGmVGZBk55KG6sUbT/Jz7ua5lE1ZorrFHAVXZrqhKhdGWL7oGaPCi+FuiQxKEAwqhX8gig2VsN3ByhMjqE0N+2N6bnu+CqOAaZSXp1FO4OYe57SNXCTUSVbgvsevGPffn8gbZ9aDXCT7YLoiBX2M/a8eMtk11m7PNLPo8dv3DBXmepVYPpwUPSf3kLB9Yw37UXv5QoBF9AlB2xv6i+nLCkmaPzpxQzfykDRSzP6ksKOBK0U+MMKW+2guKXfnqHUXnkceTKP4sW0NQ3Kfn/3zhCB745Qk5srYgm6n8O/1b4wo7uNXl7TIW35CZNxOL0MurJGrzGh+GwqA13jN3ppSNf80VtP6PUGRgVmrhIWWmihhRZaaKGFFlpooYUWWmihhRb6P6X/AM6WELD2aRmWAAAAAElFTkSuQmCC"
+            alt="">
+        <div id="nav-part2">
+            <h4>HOME </h4>
+            <h4>WORK</h4>
+            <h4>STUDIO</h4>
+            <h4>CONTACT</h4>
+        </div>
+        <div id="nav-part3">
+            <div id="circle"></div>
+        </div>
+    </div>
+    
+    <div class="main">
+        <div class="page1">
+
+            <h1>Digitally crafted</h1>
+            <h2>brand experiences</h2>
+            <video autoplay muted loop src="video1.mp4"></video>
+
+        </div>
+
+        <div class="page2">
+            <h1>We are Duo Studio,</h1>
+            <div class="page2-container">
+                <div class="page2-left">
+                    <h1>A Creative collective made to unlock your brand's potential</h1>
+                </div>
+                <div class="page2-right">
+                    <p>We weave together bold strategy creative execution to produce thought-provoking digital
+                        experiences. We take a highly personalized approach to delivering branding, web design, and
+                        content marketing solutions. Born in the DC area-now serving clients worldwide.</p>
+                    <button>ABOUT US</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="page3">
+            <h1>Selected Works</h1>
+            <div class="page3-part1">
+                <img src="image1.jpg" alt="">
+                <div class="page3-part1-left">
+                    <video autoplay muted loop src="video2.mp4"></video>
+                </div>
+            </div>
+            <div class="page3-part2">
+                <div class="page3-part2-right">
+                    <video autoplay muted loop src="video3.mp4"></video>
+                </div>
+                <img src="image2.jpg" alt="">
+            </div>
+            <div class="page3-lastpart">
+                <h1>VIEW ALL PROJECTS</h1>
+                <Button>DISCOVER</Button>
+            </div>
+        </div>
+
+        <div class="page4">
+            <div class="elem">
+                <img id="hi1" src="image4.jpg" alt="">
+                <div class="text-div">
+                    <h1>Strategy</h1>
+                    <h1>Strategy</h1>
+                </div>
+                <img id="hi2" src="image5.jpg" alt="">
+            </div>
+            <div class="elem">
+                <img id="hi3" src="image7.jpg" alt="">
+                <div class="text-div">
+                    <h1>Identity</h1>
+                    <h1>Identity</h1>
+                </div>
+                <img id="hi4" src="image6.jpg" alt="">
+            </div>
+            <div class="elem">
+                <img id="hi5" src="image4.jpg" alt="">
+                <div class="text-div">
+                    <h1>Experience</h1>
+                    <h1>Experience</h1>
+                </div>
+                <img id="hi6" src="image5.jpg" alt="">
+            </div>
+        </div>
+
+        <div class="page5">
+            <h2>MENTIONS CLIENTS</h2>
+            <div class="box" data-image="image8.avif">
+                <h3>verizon</h3>
+                <h4>Small Business Feature</h4>
+                <h4>2021</h4>
+            </div>
+            <div class="box" data-image="image9.avif">
+                <h3>Awwwards</h3>
+                <h4>Honorable Mention</h4>
+                <h4>2023</h4>
+            </div>
+            <div class="box" data-image="image10.avif">
+                <h3>Awwwards</h3>
+                <h4>Mobile Excellence</h4>
+                <h4>2020</h4>
+            </div>
+            <div class="box" data-image="image11.avif">
+                <h3>Mindsparkle Mag</h3>
+                <h4>Site of the Day</h4>
+                <h4>2020</h4>
+            </div>
+            <div class="box" data-image="image12.avif">
+                <h3>Orpetron</h3>
+                <h4>Site of the Day</h4>
+                <h4>2020</h4>
+            </div>
+        </div>
+
+        <footer>
+            <div class="part1">
+                <h1>Start a project</h1>
+                <button>GET IN TOUCH</button>
+            </div>
+            <h3>Create an experience that's as remarkable as your business.</h3>
+            <div class="part2">
+                <h4>Main Hubs</h4>
+                <h4>General Inquiries</h4>
+                <h4>Follow us</h4>
+            </div>
+            <div class="part3">
+                <h4>DC, Maryland, Virginia</h4>
+                <h4>hello@duo-studio.co</h4>
+                <h4>Instagram,LinkedIn</h4>
+            </div>
+        </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/gsap.min.js"
+        integrity="sha512-qF6akR/fsZAB4Co1QDDnUXWnaQseLGXoniuSuSlPQK6+aWhlMZcHzkasCSlnWoe+TJuudlka1/IQ01Dnhgq95g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/ScrollTrigger.min.js"
+        integrity="sha512-IHDCHrefnBT3vOCsvdkMvJF/MCPz/nBauQLzJkupa4Gn4tYg5a6VGyzIrjo6QAUy3We5HFOZUlkUpP0dkgE60A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
